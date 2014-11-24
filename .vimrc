@@ -1,6 +1,5 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
-set tabstop=2
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -17,10 +16,31 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'tpope/vim-endwise'
 
+"Colorscheme
+syntax on
+set background=dark
+set t_Co=256
+let base16colorspace=256 
+
 " Rspec 
 nnoremap <Leader>t :call RunCurrentSpecFile()<CR>
 nnoremap <Leader>s :call RunNearestSpec()<CR>
 nnoremap <Leader>l :call RunLastSpec()<CR>
+
+" Highlight Whitespaces
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
+
+" Indent Settings
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+set autoindent
+filetype plugin indent on
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

@@ -15,6 +15,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'tpope/vim-endwise'
+Plugin 'mileszs/ack.vim'
 
 "Colorscheme
 syntax on

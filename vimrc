@@ -21,9 +21,9 @@ Plugin 'mileszs/ack.vim'
 syntax on
 set background=dark
 set t_Co=256
-let base16colorspace=256 
+let base16colorspace=256
 
-" Rspec 
+" Rspec
 nnoremap <Leader>t :call RunCurrentSpecFile()<CR>
 nnoremap <Leader>s :call RunNearestSpec()<CR>
 nnoremap <Leader>l :call RunLastSpec()<CR>
@@ -42,6 +42,13 @@ set softtabstop=2
 set expandtab
 set autoindent
 filetype plugin indent on
+
+" Buffer
+map <C-b> :CtrlPBuffer<CR>
+
+" 80 Column
+:set textwidth=80
+:set colorcolumn=+1
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

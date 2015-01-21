@@ -16,6 +16,8 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'tpope/vim-endwise'
 Plugin 'mileszs/ack.vim'
+Plugin 'compactcode/alternate.vim'
+Plugin 'compactcode/open.vim'
 
 "Colorscheme
 syntax on
@@ -27,6 +29,10 @@ let base16colorspace=256
 nnoremap <Leader>t :call RunCurrentSpecFile()<CR>
 nnoremap <Leader>s :call RunNearestSpec()<CR>
 nnoremap <Leader>l :call RunLastSpec()<CR>
+
+" Alternate
+nnoremap <Leader>r :Open(alternate#FindAlternate())<CR>
+nnoremap <Leader>e :OpenVertical(alternate#FindAlternate())<CR>
 
 " Highlight Whitespaces
 highlight ExtraWhitespace ctermbg=red guibg=red
@@ -44,7 +50,7 @@ set autoindent
 filetype plugin indent on
 
 " Buffer
-map <C-b> :CtrlPBuffer<CR>
+map <Leader>b :CtrlPBuffer<CR>
 
 " 80 Column
 :set textwidth=80

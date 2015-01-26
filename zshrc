@@ -49,7 +49,7 @@ plugins=(git)
 
 # User configuration
 
-export PATH="/home/rodrigo/.rvm/gems/ruby-2.1.5/bin:/home/rodrigo/.rvm/gems/ruby-2.1.5@global/bin:/home/rodrigo/.rvm/rubies/ruby-2.1.5/bin:/home/rodrigo/.rvm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/rodrigo/.rvm/bin:/home/rodrigo/.rvm/bin"
+export PATH=$PATH:"/home/rodrigo/.rvm/gems/ruby-2.1.5/bin:/home/rodrigo/.rvm/gems/ruby-2.1.5@global/bin:/home/rodrigo/.rvm/rubies/ruby-2.1.5/bin:/home/rodrigo/.rvm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/rodrigo/.rvm/bin:/home/rodrigo/.rvm/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh

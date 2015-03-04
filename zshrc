@@ -1,3 +1,5 @@
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
@@ -81,3 +83,5 @@ source $ZSH/oh-my-zsh.sh
 alias nibbler='ssh -i ~/.ssh/id_rsa_gateway _rferreira@nibbler0001.linux.locaweb.com.br'
 
 cd ..; cd -
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

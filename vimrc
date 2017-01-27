@@ -1,5 +1,6 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
+let mapleader=","
 
 " no swp files
 set noswapfile
@@ -21,6 +22,7 @@ Plugin 'tpope/vim-endwise'
 Plugin 'mileszs/ack.vim'
 Plugin 'compactcode/alternate.vim'
 Plugin 'compactcode/open.vim'
+Plugin 'ngmy/vim-rubocop'
 
 "Colorscheme
 syntax on
@@ -58,6 +60,10 @@ map <Leader>b :CtrlPBuffer<CR>
 " 80 Column
 :set textwidth=80
 :set colorcolumn=+1
+
+" Rubocop
+let g:vimrubocop_keymap = 0
+nnoremap <leader>q :RuboCop<CR>
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

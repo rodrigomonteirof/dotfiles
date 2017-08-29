@@ -23,17 +23,23 @@ Plugin 'mileszs/ack.vim'
 Plugin 'compactcode/alternate.vim'
 Plugin 'compactcode/open.vim'
 Plugin 'ngmy/vim-rubocop'
+Plugin 'ajmwagar/vim-dues'
+Plugin 'tpope/vim-sensible'
+Plugin 'morhetz/gruvbox'
 
-"Colorscheme
-syntax on
+call vundle#end()            " required
+
+" Color
+colorscheme gruvbox
 set background=dark
-set t_Co=256
-let base16colorspace=256
 
 " Rspec
 nnoremap <Leader>t :call RunCurrentSpecFile()<CR>
 nnoremap <Leader>s :call RunNearestSpec()<CR>
 nnoremap <Leader>l :call RunLastSpec()<CR>
+nnoremap <Leader>a :call RunAllSpecs()<CR>
+
+let g:rspec_command = "!bundle exec rspec {spec}"
 
 " Alternate
 nnoremap <Leader>r :Open(alternate#FindAlternate())<CR>
@@ -65,8 +71,15 @@ map <Leader>b :CtrlPBuffer<CR>
 let g:vimrubocop_keymap = 0
 nnoremap <leader>q :RuboCop<CR>
 
+" Delete trailing white space on save
+func! DeleteTrailingWS()
+  exe "normal mz"
+  %s/\s\+$//ge
+  exe "normal `z"
+endfunc
+autocmd BufWrite * :call DeleteTrailingWS()
+
 " All of your Plugins must be added before the following line
-call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on

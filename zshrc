@@ -80,7 +80,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias nibbler='ssh -i ~/.ssh/id_rsa_gateway _rferreira@nibbler0001.linux.locaweb.com.br'
 
 cd ..; cd -
 

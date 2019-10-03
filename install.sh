@@ -1,6 +1,6 @@
 #!/bin/bash
 
-files=( vimrc tmux.conf zshrc )
+files=( vimrc zshrc )
 
 for filename in ${files[@]}
 do
